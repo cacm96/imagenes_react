@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Error from './Error';
+import PropTypes from 'prop-types';
 
 const Form = ({guardarBusqueda}) => {
 
@@ -44,6 +45,10 @@ const Form = ({guardarBusqueda}) => {
             {error ? <Error mensaje="Debe colocar un término de búsqueda" /> : null}
         </form>
      );
+}
+
+Form.propTypes = {
+    guardarBusqueda: PropTypes.func.isRequired
 }
  
 export default Form;
